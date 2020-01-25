@@ -1,7 +1,6 @@
-import logger from '../src/js/logger';
+import logger from '../logger';
 
 describe('Logger()', () => {
-
 	it('should log out a message to the console', () => {
 		// setup
 		let consoleLogWasCalledWith;
@@ -14,5 +13,4 @@ describe('Logger()', () => {
 		// teardown
 		console.log = originalConsoleLog;
 	});
-
 });
