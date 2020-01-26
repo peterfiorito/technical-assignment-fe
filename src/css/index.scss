@@ -116,6 +116,10 @@ body {
   max-width: 110px;
 }
 
+.main__choices-player-result{
+  text-align: center;
+}
+
 @media(min-width: 675px) {
   .main__choice-actions {
     flex-direction: row;
