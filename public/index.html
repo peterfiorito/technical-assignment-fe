@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Rock - Paper - Scissors</title>
 		<meta charset="UTF-8" />
@@ -8,16 +8,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div class="main__container">
-			<div class="main__scores">
+    <h1 class="main__title">Rock, Paper, Scissors, the game</h1>
+		<main class="main__container">
+			<section class="main__scores">
         <ul class="main__scores-scoreboard">
           <li>P1 - <span id="main__scores-score-1"></span></li>
           <li>P2 - <span id="main__scores-score-2"></span></li>
           <li>Draw - <span id="main__scores-score-draw"></span></li>
         </ul>
-      </div>
-      <div class="main__choice-actions">
-        <select id="main__choice-selector" class="main__choice-selector">
+      </section>
+      <section class="main__choice-actions">
+        <label for="main__choice-selector" id="main__choice-selector-label" class="main__choice-selector-label">Player one move</label>
+        <select id="main__choice-selector" class="main__choice-selector" aria-labelledby="main__choice-selector-label">
           <option disabled>Select your move</option>
           <option value="r">Rock</option>
           <option value="p">Paper</option>
@@ -28,19 +30,19 @@
           <button id="main__play-mode-1" class="button main__secondary-button main__secondary-button--left">Simulate</button>
           <button id="main__reset-games-button" class="button main__secondary-button main__secondary-button--right">RESET</button>
         </div>
-      </div>
-        <div class="main__choices">
-        <div class="main__choices-player">
+      </section>
+      <section class="main__choices">
+        <article class="main__choices-player">
           <div class="main__choices-player-image-container">
-            <img id="main__choices-player-1-image" class="main__choices-player-image">
+            <img id="main__choices-player-1-image" class="main__choices-player-image" alt="player one choice">
           </div>
-        </div>
-        <div class="main__choices-player">
+        </article>
+        <article class="main__choices-player">
           <div class="main__choices-player-image-container">
-            <img id="main__choices-player-2-image" class="main__choices-player-image">
+            <img id="main__choices-player-2-image" class="main__choices-player-image" src="../public/images/player2-placeholder.png" alt="player two choice">
           </div>
-        </div>
-      </div>
-    </div>
+        </article>
+      </section>
+    </main>
 	</body>
 </html>
