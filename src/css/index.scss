@@ -1,9 +1,138 @@
-@import './style.css';
+
+html {
+  height: 100%;
+}
 
 body {
-	background-color: green;
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  background-color: #eae8e8;
+  height: 100%;
+}
 
-	h1 {
-		color: white;
-	}
+.main__container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  background-color: white;
+  height: 100%;
+}
+
+.main__scores {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: #3c3241;
+  color: white;
+  padding: 15px;
+}
+
+.main__scores-scoreboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  padding-inline-start: 0px;
+}
+
+.main__choice-actions {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.15);
+}
+
+.main__choice-selector {
+  background-color: #fff;
+  border: 1px solid #d8d6d9;
+  box-shadow: none;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.main__play-button {
+  color: #fff;
+  background: #e77171;
+  border: 1px solid transparent;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.main__secondary-actions {
+  display: flex;
+}
+
+.main__secondary-button {
+  color: #3c3241;
+  background: #fff;
+  border: 1px solid #b1adb3;
+  width: 50%;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.main__secondary-button--left{
+  margin-right: 3px;
+}
+
+.main__secondary-button--right{
+  margin-left: 3px;
+}
+
+.main__choices-player-image-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main__choices-player-image {
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  display: flex;
+  margin-right: auto;
+  max-width: 150px;
+}
+
+@media(min-width: 675px) {
+  .main__choice-actions {
+    flex-direction: row;
+  }
+
+  .main__choice-selector {
+    width: 30%;
+    margin-bottom: 0px;
+  }
+
+  .main__play-button {
+    margin-bottom: 0px;
+    width: 30%;
+  }
+
+  .main__secondary-actions {
+    width: 30%;
+  }
+
+  .main__choices {
+    display: flex;
+    flex-direction: row;
+    min-height: 150px;
+  }
+
+  .main__choices-player {
+    width: 50%;
+  }
 }
