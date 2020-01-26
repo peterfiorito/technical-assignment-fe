@@ -16,6 +16,8 @@ const scoreContainerP2 = document.getElementById('main__scores-score-2');
 const scoreContainerDraw = document.getElementById('main__scores-score-draw');
 const imageChoiceP1Container = document.getElementById('main__choices-player-1-image');
 const imageChoiceP2Container = document.getElementById('main__choices-player-2-image');
+const resultContainerP1 = document.getElementById('main__choices-player-1-result');
+const resultContainerP2 = document.getElementById('main__choices-player-2-result');
 
 // Start a new gameboard
 let gameBoard = new Gameboard();
@@ -26,11 +28,13 @@ imageChoiceP1Container.src = `../../public/images/${optionSelectElement.value}.p
 
 playAgainstPc.addEventListener('click', (event) => {
   event.preventDefault();
+  cleanUpLastWinnerText();
   createNewGame(0);
 });
 
 playSimulated.addEventListener('click', (event) => {
   event.preventDefault();
+  cleanUpLastWinnerText();
   createNewGame(1);
 });
 
@@ -43,6 +47,7 @@ resetGame.addEventListener('click', (event) => {
   scoreContainerP2.innerText = gameBoard.score.player_2;
   scoreContainerDraw.innerText = gameBoard.score.draw;
   imageChoiceP2Container.src='../public/images/player2-placeholder.png';
+  cleanUpLastWinnerText();
 });
 
 optionSelectElement.addEventListener('change', (event) => {
@@ -50,7 +55,13 @@ optionSelectElement.addEventListener('change', (event) => {
   imageChoiceP1Container.src = `../../public/images/${event.target.value}.png`;
   // and clean up P2 UI
   imageChoiceP2Container.src = '../public/images/player2-placeholder.png';
+  cleanUpLastWinnerText();
 });
+
+const cleanUpLastWinnerText = () => {
+  resultContainerP1.innerText = '';
+  resultContainerP2.innerText = '';
+}
 
 const createNewGame = (mode) => {
   gameBoard.setGameMode(mode);
@@ -72,6 +83,12 @@ const createNewGame = (mode) => {
   // set result of game
   game.compareChoices();
   gameBoard.setScore(game.winner);
+  // Update UI feedback
+  if(game.winner == 1 ) {
+    resultContainerP1.innerText = "Winner!";
+  } else if (game.winner == 2) {
+    resultContainerP2.innerText = "Winner!"
+  }
   // Update UI with scores
   scoreContainerP1.innerText = gameBoard.score.player_1;
   scoreContainerP2.innerText = gameBoard.score.player_2;
