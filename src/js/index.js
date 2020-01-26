@@ -42,7 +42,7 @@ resetGame.addEventListener('click', (event) => {
   scoreContainerP1.innerText = gameBoard.score.player_1;
   scoreContainerP2.innerText = gameBoard.score.player_2;
   scoreContainerDraw.innerText = gameBoard.score.draw;
-  imageChoiceP2Container.src='';
+  imageChoiceP2Container.src='../public/images/player2-placeholder.png';
 });
 
 optionSelectElement.addEventListener('change', (event) => {
