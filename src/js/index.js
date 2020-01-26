@@ -49,7 +49,7 @@ optionSelectElement.addEventListener('change', (event) => {
   // Update P1 UI image based on choice change
   imageChoiceP1Container.src = `../../public/images/${event.target.value}.png`;
   // and clean up P2 UI
-  imageChoiceP2Container.src = '';
+  imageChoiceP2Container.src = '../public/images/player2-placeholder.png';
 });
 
 const createNewGame = (mode) => {
