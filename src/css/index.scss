@@ -113,7 +113,7 @@ body {
   margin-left: auto;
   display: flex;
   margin-right: auto;
-  max-width: 150px;
+  max-width: 110px;
 }
 
 @media(min-width: 675px) {
@@ -139,9 +139,10 @@ body {
     display: flex;
     flex-direction: row;
     min-height: 150px;
+    justify-content: space-between;
   }
 
   .main__choices-player {
-    width: 50%;
+    width: 33%;
   }
 }
