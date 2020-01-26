@@ -4,10 +4,43 @@
 		<title>Rock - Paper - Scissors</title>
 		<meta charset="UTF-8" />
 		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<h1>You are ready to go! :)</h1>
-		<h2>Good luck!</h2>
+		<div class="main__container">
+			<div class="main__scores">
+        <ul class="main__scores-scoreboard">
+          <li>P1 - <span id="main__scores-score-1"></span></li>
+          <li>P2 - <span id="main__scores-score-2"></span></li>
+          <li>Draw - <span id="main__scores-score-draw"></span></li>
+        </ul>
+      </div>
+      <div class="main__choice-actions">
+        <select id="main__choice-selector" class="main__choice-selector">
+          <option disabled>Select your move</option>
+          <option value="r">Rock</option>
+          <option value="p">Paper</option>
+          <option value="s">Scissors</option>
+        </select>
+        <button id="main__play-mode-0" class="button main__play-button">Play</button>
+        <div class="main__secondary-actions">
+          <button id="main__play-mode-1" class="button main__secondary-button main__secondary-button--left">Simulate</button>
+          <button id="main__reset-games-button" class="button main__secondary-button main__secondary-button--right">RESET</button>
+        </div>
+      </div>
+        <div class="main__choices">
+        <div class="main__choices-player">
+          <div class="main__choices-player-image-container">
+            <img id="main__choices-player-1-image" class="main__choices-player-image">
+          </div>
+        </div>
+        <div class="main__choices-player">
+          <div class="main__choices-player-image-container">
+            <img id="main__choices-player-2-image" class="main__choices-player-image">
+          </div>
+        </div>
+      </div>
+    </div>
 	</body>
 </html>
